@@ -16,9 +16,9 @@ Power up Trello, Jira, CRM/CMS and any web site or service with IMAP mailbox int
 
 
 ```
-#!sh
 
-clone this repository
+# clone the repository
+git clone git@github.com:garakh/mailwork.git .
 
 # install php dependencies
 php composer.phar install
@@ -29,6 +29,7 @@ bower install
 ```
 
 **Configure via gulp**
+
 
 ```
 
