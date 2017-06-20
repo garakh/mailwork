@@ -1,0 +1,28 @@
+<div class="container mw-window">
+    <header>
+        <div class="mw-header">
+            <a href="#!" class="button mw-header__back" ng-click="back()">Back</a>
+            <div class="mw-header__text">Templates</div>
+            <button id="close" class="mw-header__close" ng-click="closeIFrame()"></button>
+        </div>
+    </header>
+    <div class="mw-list">
+        <div class="mw-empty-template-list" ng-show="templates.length === 0">
+            <div>You don't have any templates</div>
+            <div class="mw-empty-template-line"></div>
+            <div class="mw-empty-template-line"></div>
+            <div class="mw-empty-template-line"></div>
+        </div>
+        <mw-templates mw-templates="templates" delete="deleteTemplate(id)" send="sendTemplate(template)"></mw-templates>
+    </div>
+    <footer>
+        <div class="mw-footer__divider"></div>
+        <div class="mw-footer">
+            <textarea class="mw-new-template" ng-model="newTemplateText"></textarea>
+            <div>
+                <input type="button" id="save-button" class="button-primary mw-tmp__button_save"
+                       value="Save as a template" ng-click="addTemplate()">
+            </div>
+        </div>
+    </footer>
+</div>

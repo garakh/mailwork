@@ -1,0 +1,36 @@
+<div class="container mw-window">
+    <header>
+        <div class="mw-header">
+            <div class="dropdown">
+                <button class="mw-header__settings" id="settings"></button>
+                <div class="dropdown-content">
+                    <a ng-click="receiveMail(true)">Reload messages</a>
+                    <a ng-click="listMailboxes()">Show mailboxes</a>
+                </div>
+            </div>
+            <div class="mw-header__text">Chat with {{email}}</div>
+            <button id="close" class="mw-header__close" ng-click="closeIFrame()"/>
+        </div>
+    </header>
+    <div class="mw-list" id="mw-messages">
+        <div class="mw-empty-template-list" ng-show="loading && messages.length === 0">
+            <div>Looking for chat with {{email}}</div>
+        </div>          
+        <div class="mw-empty-template-list" ng-show="!loading && messages.length === 0">
+            <div>You don't have messages with {{email}}</div>
+        </div>        
+        <span us-spinner spinner-key="main" spinner-on="loading" class="mw-spinner"></span>
+        <mw-messages mw-messages="messages"></mw-messages>
+    </div>
+    <footer>
+        <div class="mw-footer__divider"></div>
+        <div class="mw-footer">
+            <textarea class="mw-new-msg" ng-model="newMessage" ng-enter="sendEmail()" ctrl="true"></textarea>
+            <div>
+                <input type="button" id="send-button" class="button-primary mw-footer__send-button"
+                       value="Send" ng-click="sendEmail()">
+                <a id="template-button" class="button mw-footer__template-button" ng-click="toTemplates()">Choose from templates</a>
+            </div>
+        </div>
+    </footer>
+</div>

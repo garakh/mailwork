@@ -1,0 +1,12 @@
+<div class="mw-msg" ng-repeat="msg in messages track by $index" ng-class="[{'mw-own-msg': msg.owner}]">
+    <div class="mw-msg__header">
+        <div class="email">{{msg.email}}</div>
+        <div class="date"> {{msg.date | date: 'dd.MM.yyyy'}} <span class="time">{{msg.date | date: 'HH:mm'}}</span></div>
+    </div>
+
+    <div class="mw-msg__body" title="{{msg.subj}}" ng-class="{'pre' : msg.shown}">
+        {{msg.body}}
+    </div>
+    <div class="mw-msg__show" ng-hide="msg.isShort" ng-click="msg.showAll()">{{msg.shown?'Show less':'Show all'}}</div>
+    <div class="mw-list__divider" ng-show="msg.divider"></div>
+</div>

@@ -1,0 +1,7 @@
+<div class="mw-tmp" ng-repeat="t in templates track by $index">
+    <div class="mw-tmp__body" ng-click="send({template: t.text})">
+        {{t.text}}
+    </div>
+    <a class="mw-tmp__delete" ng-click="delete({id: $index})">Delete</a>
+    <div class="mw-list__divider"></div>
+</div>

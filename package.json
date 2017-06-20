@@ -1,0 +1,9 @@
+{
+  "name": "mailwork",
+  "version": "0.0.2",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "inquirer": "^3.0.1",
+    "bower": "^1.8.0"
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Options &mdash; Mailwork</title>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+        <link rel="stylesheet" href="options.css">
+
+    </head>
+    <body>
+        <div class="pure-g">
+            <div class="pure-u-1-1 container" style="">
+                <form class="pure-form pure-form-stacked">
+                    <fieldset>
+                        <legend>Settings</legend>
+
+
+                        <label for="mw-url">Mailwork server host</label>
+                        <input id="mw-url" type="text" placeholder="https://mailwork.pro/">
+                        <span class="pure-form-message">This is a required field</span>
+
+                        <label for="mw-token">Authorization token</label>
+                        <input id="mw-token" type="password" placeholder="publicserver">
+                        <span class="pure-form-message">Use `publicserver` for https://mailwork.pro/</span>
+
+                        <label for="custom" class="pure-checkbox" id="custom-options-checkbox">
+                            <input id="custom" type="checkbox"> Use custom IMAP
+                        </label>
+
+                        <div id="custom-options">
+                            <label for="mw-custom-email">Email</label>
+                            <input id="mw-custom-email" type="text" placeholder="">
+                            <span class="pure-form-message">Your email address</span>                           
+
+                            <label for="mw-custom-imap-server">IMAP server</label>
+                            <input id="mw-custom-imap-server" type="text" placeholder="imap.gmail.com">
+                            <span class="pure-form-message">E.g. for GMail: imap.gmail.com</span>                           
+
+                            <label for="mw-custom-smtp-server">SMTP server</label>
+                            <input id="mw-custom-smtp-server" type="text" placeholder="smtp.gmail.com">
+                            <span class="pure-form-message">E.g. for GMail: smtp.gmail.com</span>                           
+
+                            <label for="mw-custom-imap-port">IMAP port</label>
+                            <input id="mw-custom-imap-port" type="text" placeholder="993">
+                            <span class="pure-form-message">E.g. for GMail: 993</span>     
+
+                            <label for="mw-custom-smtp-port">SMTP port</label>
+                            <input id="mw-custom-smtp-port" type="text" placeholder="587">
+                            <span class="pure-form-message">E.g. for GMail: 587</span> 
+
+                            <label for="mw-custom-imap-username">IMAP username</label>
+                            <input id="mw-custom-imap-username" type="text" placeholder="">
+                            <span class="pure-form-message">E.g. for GMail: your e-mail</span>                             
+
+                            <label for="mw-custom-imap-password">IMAP password</label>
+                            <input id="mw-custom-imap-password" type="password" placeholder="">
+                            <span class="pure-form-message">E.g. for GMail: your gmail password</span>                              
+
+                            <label for="mw-custom-imap-inbox">Incoming mailboxs</label>
+                            <input id="mw-custom-imap-inbox" type="text" placeholder="INBOX">
+                            <span class="pure-form-message">E.g. for GMail: INBOX. Use comma to specify several mailboxs</span>       
+
+                            <label for="mw-custom-imap-outbox">Sent mailboxs</label>
+                            <input id="mw-custom-imap-outbox" type="text" placeholder="[Gmail]/Sent Mail">
+                            <span class="pure-form-message">E.g. for GMail: [Gmail]/Sent Mail. Use comma to specify several mailboxs</span>     
+
+                            <label for="mw-custom-imap-copyto">Where to copy sent emails</label>
+                            <input id="mw-custom-imap-copyto" type="text" placeholder="[Gmail]/Sent Mail">
+                            <span class="pure-form-message">E.g. for GMail: [Gmail]/Sent Mail</span>                                 
+                        </div>
+
+                        <button type="button" class="pure-button pure-button-primary" id="save">Save</button>
+                    </fieldset>
+                </form>   
+            </div>
+        </div>
+        <script src="options.js"></script>
+    </body>
+</html>

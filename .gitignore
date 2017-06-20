@@ -1,0 +1,8 @@
+/.idea
+/vendor/*
+src/Config/Config.php
+src/Config/config.json
+/nbproject/*
+src/cache/*
+/public/js/lib/*
+/node_modules/*

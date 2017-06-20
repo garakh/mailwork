@@ -1,0 +1,38 @@
+{
+    "name": "PassworkTeam/Mailwork",
+    "description": "Power up Trello, Jira, CRM/CMS and any web site or service with IMAP mailbox integration. Click any e-mail and instantly get the correspondence history.",
+    "version": "1.0.0",
+    "keywords" : ["email", "imap", "smtp", "chrome", "extenstion"],
+    "homepage" : "https://mailwork.me/",
+    "time" : "2017-04-05",
+    "license" : "GPL-3.0+",
+    "type": "library",
+    "authors" : [
+        {
+            "name" : "Passwork Team",
+            "email" : "info@passwork.me",
+            "homepage" : "https://passwork.me"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/garakh/imap"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.0",
+        "ddeboer/imap": "dev-mw",
+        "hassankhan/config": "^0.10.0",
+        "jdorn/file-system-cache": "dev-master",
+        "tuupola/cors-middleware": "^0.5.2",
+        "pear/mail": "^1.3",
+        "pear/net_smtp": "^1.7",
+        "pear/pear-core-minimal": "^1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "PassworkTeam\\Mailwork\\": "src/"
+        }
+    }
+}

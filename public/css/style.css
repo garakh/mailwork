@@ -1,0 +1,391 @@
+/*DEBUG border-style/
+div, button {
+    border-style: dashed!important;
+    border-width: 1px!important;
+    border-color: red!important;
+}
+*/
+
+@font-face {
+    font-family: 'museo_sans_cyrl300';
+    src: url('../img/font/museosanscyrl_300.eot');
+    src: url('../img/font/museosanscyrl_300.eot?#iefix') format('embedded-opentype'),
+        url('../img/font/museosanscyrl_300.woff') format('woff'),
+        url('../img/font/museosanscyrl_300.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'museo_sans_cyrl500';
+    src: url('../img/font/museosanscyrl_500.eot');
+    src: url('../img/font/museosanscyrl_500.eot?#iefix') format('embedded-opentype'),
+        url('../img/font/museosanscyrl_500.woff') format('woff'),
+        url('../img/font/museosanscyrl_500.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museo_sans_cyrl700';
+    src: url('../img/font/museosanscyrl_700.eot');
+    src: url('../img/font/museosanscyrl_700.eot?#iefix') format('embedded-opentype'),
+        url('../img/font/museosanscyrl_700.woff') format('woff'),
+        url('../img/font/museosanscyrl_700.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body {
+    height: 100%;
+    font-size: 10px;
+}
+
+.container {
+    max-width: 62rem;
+    min-width: 45rem;
+    min-height: 40rem;
+    /*max-height: 69rem;/*initial layout design*/
+    height: 100%; /* calc(100% - 0rem);/*vertical shift*/
+    line-height: 1.2;
+}
+
+.mw-window {
+    position: relative;
+    border: #666666 solid 0.3rem;
+    border-radius: 1rem;
+    background-color: white;
+    height: calc( 100% - 60px );
+    top: 30px;
+    box-shadow: 0 0 15px 5px rgba(50, 50, 50, 0.5);
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-button {
+    display: block;
+    height: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #D2D2D2;
+    border-radius: 1rem;
+}
+
+.mw-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #F6F6F6;
+    text-align: center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    height: 6.9rem;
+}
+
+.mw-header__text {
+    font-size: 2rem;
+    font-family: museo_sans_cyrl700, sans-serif;
+    margin-top: 2.2rem;
+}
+
+.mw-header__settings, .mw-header__close {
+    position: absolute;
+    border-style: none;
+    height: 3rem;
+}
+
+.mw-header__settings {
+    background: url("../img/settings.svg") center no-repeat;
+    background-size: 2.6rem;
+    margin-left: 1.2rem;
+    left: 0;
+    top: 1.8rem;
+}
+
+.mw-header__close {
+    background: url("../img/close.svg") center no-repeat;
+    background-size: 1.8rem;
+    margin-right: 0.7rem;
+    right: 0;
+    top: 1.8rem;
+}
+
+.mw-header__back {
+    position: absolute;
+    border-style: none;
+    background: url("../img/group 42.svg") left no-repeat;
+    background-size: 1.8rem;
+    margin-left:3rem;
+    padding: 0 0 3rem 2.5rem;
+    height:3.6rem;
+    left: 0;
+    top: 1.6rem;
+    text-align: right!important;
+    font-family: museo_sans_cyrl700, sans-serif!important;
+    text-transform: none !important;
+    font-weight: normal !important;
+    font-size: 2rem;
+    letter-spacing: 0!important;
+    color:#0E7FC4;
+}
+
+.mw-header__back:focus, .mw-header__back:hover {
+    color:#0E7FC4;
+}
+
+.mw-list__divider {
+    border-top: 0.2rem solid #E4E4E4;
+    height: 0.2rem;
+    margin: 1rem 1rem 0 0;
+}
+
+.mw-msg {
+    margin: .5rem 1rem .5rem 0;
+    padding: 2rem 0 .3rem 1.3rem;
+    border-radius: 0.6rem;
+    border-bottom-style: none;
+}
+
+.mw-own-msg {
+    background-color: #E5F1F8;
+}
+
+.mw-msg__header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mw-msg__header > .email {
+    font-family: museo_sans_cyrl500, sans-serif;
+    font-size: 1.8rem;
+}
+
+.mw-msg__header > .date {
+    font-size: 1.3rem;
+    padding: .5rem 1rem .3rem 0;
+    text-align: right;
+    font-family: museo_sans_cyrl500, sans-serif;
+    color: #5F5F5F;
+}
+
+.mw-msg__header > .date > .time {
+    font-family: museo_sans_cyrl700, sans-serif;
+}
+
+.mw-msg__body, .mw-tmp__body {
+    padding: 1rem 0 1.4rem 0;
+    font-family: museo_sans_cyrl300, sans-serif;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.mw-msg__body.pre{
+    white-space: pre;
+}
+
+.mw-msg__show {
+    display: inline-block;
+    font-family: museo_sans_cyrl300, sans-serif;
+    font-size: 1.1rem;
+    color: #A9B2B8;
+    border: solid #A9B2B8 0.1rem;
+    border-radius: 1rem;
+    padding: .2rem 1rem .2rem .9rem;
+    margin-bottom: 1rem;
+}
+
+.mw-msg__show:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.mw-tmp{
+    margin-left:1rem;
+}
+
+.mw-tmp__body{
+    display: inline-block;
+    padding: 2rem 0 1rem .2rem;
+    width: calc(100% - 10rem);
+}
+
+.mw-tmp__delete{
+    width: 5rem;
+    float:right;
+    font-family: museo_sans_cyrl500, sans-serif;
+    font-size: 1.4rem;
+    padding: 1rem;
+    margin: 1rem 0 0 0;
+    color: red;
+    cursor: pointer;
+}
+
+.mw-tmp__delete:hover{
+    color: red;
+}
+
+.mw-list {
+    margin: 6.9rem .3rem 0 1.7rem;
+    height: calc(100% - 22.3rem);
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.mw-footer__divider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15.3rem;
+    border-top: solid #B2B2B2 0.2rem;
+}
+
+.mw-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 3.3rem);
+    height: 14.8rem;
+    margin: .5rem .3rem .5rem 3rem;
+}
+
+.mw-new-msg, .mw-new-template{
+    width: 100%;
+    height: 7rem;
+    position: relative;
+    padding: 1.5rem 1rem .1rem 0rem;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    font-size: 1.5rem !important;
+}
+
+.mw-new-msg:focus, .mw-new-template:focus {
+    outline: none;
+    border: none;
+}
+
+.mw-footer__send-button {
+    position: absolute;
+    bottom: 0;
+    width: 15rem;
+    height: 4rem !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    background-color: #0E7FC4 !important;
+    font-size: 1.8rem !important;
+    font-family: museo_sans_cyrl500, sans-serif !important;
+    text-transform: none !important;
+    font-weight: normal !important;
+}
+
+.mw-footer__template-button {
+    position: absolute;
+    right: 2.6rem !important;
+    bottom: 0 !important;
+    padding: 0 !important;
+    color: #6D6D6D !important;
+    border: none !important;
+    font-size: 1.4rem !important;
+    font-family: museo_sans_cyrl300, sans-serif !important;
+    text-transform: none !important;
+    letter-spacing: -0.05rem !important;
+    font-weight: normal !important;
+}
+
+.mw-tmp__button_save{
+    position: absolute;
+    bottom: 0;
+    width: 25rem;
+    height: 4rem !important;
+    border: none !important;
+    border-radius: .5rem !important;
+    background-color: #0E7FC4 !important;
+    font-size: 1.8rem !important;
+    font-family: museo_sans_cyrl500, sans-serif !important;
+    text-transform: none !important;
+    font-weight: normal !important;
+    letter-spacing: 0!important;
+}
+
+.mw-empty-template-list{
+    display: block;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    text-align: center;
+    font-size: 2rem;
+    font-family: museo_sans_cyrl700, sans-serif;
+    color: #CCCCCC;
+}
+
+.mw-empty-template-line{
+    margin: 2rem 0 1rem 0;
+    display: block;
+    background-color: #EDEDED;
+    height: 1.5rem;
+    width: 15rem;
+}
+.mw-empty-template-line:nth-child(3){
+    width: 20rem;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    margin: 2rem 0 0 2rem;
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 1.2rem 1.6rem;
+    margin: .0 0 0 0;
+    text-decoration: none;
+    display: block;
+    border: solid #999 .1rem;
+    border-radius: 0;
+    background-color: #f7f7f7;
+    text-align: left;
+    font-family: museo_sans_cyrl300, sans-serif!important;
+    font-size: 1.6rem;
+}
+
+.dropdown-content a:first-of-type{
+    border-bottom: none;
+}
+.dropdown-content a:last-of-type{
+    border-top: none;
+}
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.mw-spinner{
+    opacity: 0.3;
+}

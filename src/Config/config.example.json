@@ -1,0 +1,25 @@
+{
+    "search": {
+        "date-modifier": "-6 month"
+    },
+    "authorization": {
+        "secret-token": "supersecrettoken"
+    },
+    "mail-settings": {
+        "email": "username@gmail.com",
+        "imap-server": "imap.gmail.com",
+        "smtp-server": "smtp.gmail.com",
+        "imap-port": 993,
+        "smtp-port": 587,
+        "username": "username",
+        "password": "password",
+        "copy-sent-to": "[Gmail]/Sent Mail",
+        "search-mailbox-in": ["INBOX"],
+        "search-mailbox-out": ["[Gmail]/Sent Mail"]
+    },
+    "cache-settings":
+            {
+                "path": "/../cache",
+                "ttl": 300
+            }
+}

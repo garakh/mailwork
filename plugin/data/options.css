@@ -1,0 +1,29 @@
+body {
+    background-color: #f5f5f5;
+}
+.container{
+    padding: 30px
+}
+
+.pure-button-primary{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;    
+}
+
+.pure-form legend{
+    font-size:1.5em;
+}
+
+.pure-form-message{
+    font-size: 0.95em;
+}
+#custom-options{
+    display: none;
+}
+#custom-options-checkbox{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
