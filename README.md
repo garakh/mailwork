@@ -16,9 +16,9 @@ Power up Trello, Jira, CRM/CMS and any web site or service with IMAP mailbox int
 
 
 ```
-#!sh
 
-clone this repository
+# clone the repository
+git clone git@github.com:garakh/mailwork.git .
 
 # install php dependencies
 php composer.phar install
@@ -30,8 +30,8 @@ bower install
 
 **Configure via gulp**
 
+
 ```
-#!sh
 
 # install gulp dependencies
 npm install
@@ -47,7 +47,6 @@ gulp setup
 Copy `src/Config/config.example.json` to `src/Config/config.json`
 
 ```
-#!json
 {
     "search": {
         "date-modifier": "-6 month"
@@ -84,7 +83,6 @@ Your browser will display a lot of warnings if you don't use HTTPS on Mailwork s
 You can create a free self-signed SSL certificate and install it on your local computer.
 
 ```
-#!sh
 openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days X365 -nodes
 openssl x509 -outform der -in cert.pem -out cert.crt
 ```
