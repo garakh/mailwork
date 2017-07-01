@@ -270,9 +270,10 @@ h4 {
     margin: 40px 0 0 0;
 }
 .ctas-free {
-    margin: 15px 0 0 0;
+    margin: 25px 0 0 0;
     letter-spacing: 2px;
     font-family: Museo700;
+    text-transform: uppercase;
 }
 .centerdevices,
 .sidedevices {
@@ -424,6 +425,11 @@ h4 {
     font-size: 55px;
     color: black
 }
+
+.feature3.whiteback{
+    background-color:#fff
+}
+
 @media (max-width: 750px) {
     .feature3 .emoji {
         font-size: 40px;
@@ -488,4 +494,13 @@ a.col-6:hover{
 .github-fork-ribbon:hover:before{
     background-color:#a00;
 
+}
+#howitworks{
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+}
+
+#howitworks:hover{
+    opacity:0.6;
 }

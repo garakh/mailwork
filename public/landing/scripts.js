@@ -1,6 +1,6 @@
 'use strict';
 $(function () {
-    
+
     var bgIndex = 1;
     setInterval(function () {
         $('#mask-img' + bgIndex).removeClass('active');
@@ -11,4 +11,14 @@ $(function () {
 
         $('#mask-img' + bgIndex).addClass('active');
     }, 5000);
+
+
+
+    $('.youtube').on('click', function () {
+        $.showYtVideo({
+            videoId: 'AKhxtSdRqUg'
+        });
+        
+        return false;
+    });
 });
